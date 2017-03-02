@@ -206,7 +206,7 @@ class AlarmClock implements ActionListener
       
       gbc.gridx = 5;
       gbc.insets = new Insets(0,0,0,0);
-      gbc.gridwidth = 1;
+      gbc.gridwidth = 1; 
       gbc.gridheight = 2;
       fr.add(time,gbc);
       
@@ -229,7 +229,7 @@ class AlarmClock implements ActionListener
       gbc.insets = new Insets(10,0,10,10);
       fr.add(spinnerLbl,gbc);
       
-      time.setUI(new RotatedLabelUI(true));
+//       time.setUI(new RotatedLabelUI(true));
       amPmGroup.add(amBtn);
       amPmGroup.add(pmBtn);
       secondBtnGroup.add(firstOption);
@@ -392,7 +392,7 @@ class AlarmClock implements ActionListener
       timer = new Timer();
       task = new TimerTask(){public void run(){alarmTask();}};
       
-      try{Process p = Runtime.getRuntime().exec("powercfg.exe /setactive abd634e2-9de1-465d-85eb-c63ed66d3030");}
+      try{Process p = Runtime.getRuntime().exec("powercfg.exe /setactive 171c2d4b-78a8-43a3-887b-e1b95faf7061");}
       catch(IOException ex){ex.printStackTrace();}
       if(snooze.isSelected())
       {
